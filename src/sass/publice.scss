@@ -1,6 +1,6 @@
 @charset "utf-8";
 body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure{margin:0;padding:0}
-body{font-family: "微软雅黑";}
+body{font-family: "宋体";}
 h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:normal}
 a,u{text-decoration: none;}
 b,strong{font-weight:normal}
@@ -12,18 +12,21 @@ input{outline:none;border:0;}
 .clear_fix{zoom:1;}
 /* header头 */
 #headerWrap{height: 150px;background: #b61541;}
-.header-top{width: 980px;height: 120px;position: relative;margin: auto;background: #0f0;}
+.header-top{width: 980px;height: 120px;position: relative;margin: auto;}
 #headerLogo{width: 438px;height: 120px;position: absolute;left: -14px;top: 0}
 .header-r{
     float: right;
-
+    height: 100%;
 }
 .header-r-t{
     margin-bottom: 32px;
+    height: 21px;
+    padding-top: 6px;
 }
 .header-t-nav{
     float: left;
     font-size: 12px;
+    padding-top: 4px;
 }
 .header-t-nav li{
     float: left;
@@ -54,27 +57,252 @@ input{outline:none;border:0;}
     float: left;
     width: 158px;
     height: 18px;
+    font-size: 12px;
     border-top: 2px solid #dedacf;
     border-left: 2px solid #dedacf;
     border-bottom: 1px solid #b1b1af;
     line-height: 18px;
-
+    color: #b1b1b3;
 }
 .header-sousuo{
     float: left;
     width: 24px;
     height: 21px;
-    background: #fff;
+    background: #fff url(../images/ico-magnifying.gif) no-repeat center;;
     border-top: 2px solid #dedacf;
     border-right: 1px solid #b1b1af;
     border-bottom: 1px solid #b1b1af;
+    cursor: pointer;
 }
-.header-r-m p{
-    text-align: right;
-    font-size: 14px;
+.header-r-m{
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 13px;
+    p{
+        text-align: right;
+        font-size: 14px;
+        color: #f9deb3;        
+        a{
+            color: #fff;
+        }
+    }
 }
 .header-r-b{
     text-align: right;
     font-size: 14px;
     font-weight: bold;
+    a{
+        display: block;
+        width: 180px;
+        height: 22px;
+        float: right;
+        color: #f3d4a5;
+        // padding-left: 16px;
+        background: url(../images/header-tel.gif) no-repeat
+    }
+}
+// 头导航
+.header-nav{
+    height: 28px;
+    border-top: 1px solid #fef3e1;
+    border-bottom: 1px solid #d0a964;
+    background: #fadeb6;
+    position: relative;
+    ul{
+        width: 965px;
+        margin: auto;
+        padding-left: 15px;
+        li{
+            float: left;
+            background: url(../images/nav_line.jpg) no-repeat;
+        }
+        a{
+            display: block;
+            width: 140px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            font-size: 12px;
+            color: #8b5b2d;
+        }
+        li:first-of-type{
+            background: none;
+        }
+        .good-category{
+            width: 200px;
+        }
+        li:nth-of-type(2):hover .good-category{
+            background: rgba(255,255,255, .5);
+        }
+       .shopping-li{
+            position: relative;
+        }
+        .shopping-cart{
+            padding-left: 28px;
+            width: 112px;
+            background: url(../images/shoppin-cart.jpg) no-repeat 32% center;
+        }
+        .shopping-li:hover{
+            background:url(../images/idx-nav-cart-hover.gif) no-repeat;
+        }
+        //二级菜单
+        .header-submenu{
+            width: 200px;
+            position: absolute;
+            padding-top: 12px;
+            background: rgba(255,255, 255, .5);
+            display: none;
+            li{
+                clear: both;
+                background: none;
+            }
+            li a{
+                width: 200px;
+                height: 36px;
+                color: #333;
+            }
+            li a:hover{
+                color: #8d0020;
+                text-decoration: underline;
+            }
+        }
+        //头部购物车
+        .shop-con{
+            position: absolute;
+            left: -97px;
+            top: 29px;
+            width: 236px;
+            border: 1px solid #adadad;
+            display: none;
+            h2{
+                font-size: 12px;
+                font-weight: bold;
+                color: #fff;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                background: #b13355;
+            }
+            .shop-show{
+                font-size: 12px;
+                color: #000;
+                min-height: 52px;
+                text-align: center;
+                line-height: 52px;
+                background: rgba(255,255,255, .5)
+            }
+        }
+    }
+}
+// 脚部板块
+// 脚部上半部分
+.footer-t{
+    height: 112px;
+    background: #b61541 url(../images/footer-buttomimg.jpg) no-repeat center bottom;
+}
+.footer-t-con{
+    width: 1000px;
+    height: 107px;
+    margin: auto;
+    .sub-logo{
+        width: 149px;
+        height: 68px;
+        float: left;
+        padding-top: 20px;
+    }
+    .about-us{
+        float: left;
+        margin-left: 160px;
+        color: #fff;
+        font-size: 14px;
+        p{
+            height: 14px;
+            line-height: 14px;
+            padding-top: 30px;
+            margin-bottom: 14px;
+            span{
+                margin-right: 40px;
+            }
+        }
+        div{
+            .weibo{
+                float: left;
+                width: 39px;
+                height: 23px;
+                background: url(../images/xle.gif) no-repeat right center;
+                margin-right: 63px;
+            }
+            input{
+                float: left;
+                width: 143px;
+                height: 18px;
+                border-left: 2px solid #ccc;
+                border-top: 2px solid #ccc;
+                border-right: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                padding-left: 3px;
+                font-size: 12px;
+                color: #aeaeae;
+                margin-right: 4px;
+            }
+            .subscribed{
+                width: 88px;
+                height: 20px;
+                background: url(../images/emile-imgs.jpg);
+                float: left;
+                margin-top: 1px;
+            }
+        }
+    }
+}
+//脚部下半部分
+.footer-b{
+    height: 132px;
+    background: url(../images/footer_bg.png) no-repeat center top;
+}
+.footer-b-con{
+    width: 1000px;
+    height: 132px;
+    margin: auto;
+    .footer-nav{
+        padding-top: 38px;
+        text-align: center;
+        font-size: 14px;
+        color: #b59759;
+        a{
+            color: #b59759;
+            margin: 0 30px;
+        }
+    }
+    .footer-beian{
+        font-size: 12px;
+        color: #b3965a;
+        .beian-1{
+            float: left;
+            margin-left: 18px;
+            a{
+                float: left;
+                width: 47px;
+                height: 47px;
+                background: url(../images/industryremark_l.png) no-repeat;
+            }
+        }
+        .beian-2{
+            float: left;
+            margin-left: 38px;
+            a{
+                float: left;
+                width: 47px;
+                height: 47px;
+                background: url(../images/wangan.png) no-repeat;
+            }
+        }
+        p{
+            height: 12px;
+            line-height: 12px;
+            float: left;
+            margin-top: 34px;
+            margin-left: 3px;
+        }
+    }
 }

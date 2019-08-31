@@ -18,7 +18,7 @@
             <!-- 右部分 -->
             <div class="header-r">
                 <!-- 上 -->
-                <div class="header-r-t clear_fix">
+                <div class="header-r-t">
                     <ul class="header-t-nav">
                         <li>
                             <a href="login.html">登录</a>
@@ -48,7 +48,106 @@
             </div>
         </div>
         <!-- 头部导航 -->
-        <div class="header-nav"></div>
+        <div class="header-nav">
+            <ul class="clear_fix">
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a class="good-category" href="#">商品分类</a>
+                    <ol class="header-submenu">
+                        <li><a href="#">蛋糕冰激凌</a></li>
+                        <li><a href="#">经典套装</a></li>
+                        <li><a href="#">甜蜜有“你”外带冰激凌火锅套装</a></li>
+                        <li><a href="#">经典欧式蛋糕</a></li>
+                        <li><a href="#">礼品卡券</a></li>
+                        <li><a href="#">冰激凌礼盒</a></li>
+                        <li><a href="#">巧克力礼盒</a></li>
+                        <li><a href="#">礼品</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">明星产品</a>
+                </li>
+                <li>
+                    <a href="#">企业采购</a>
+                </li>
+                <li>
+                    <a href="#">品牌故事</a>
+                </li>
+                <li class="shopping-li">
+                    <a href="#" class="shopping-cart">购物车</a>
+                    <div class="shop-con">
+                        <h2>您的购物车</h2>
+                        <div class="shop-show">您的购物车中还没有商品</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
+    <!-- 尾部 -->
+    <div id="footerWrap">
+        <div class="footer-t">
+            <div class="footer-t-con">
+                <div class="sub-logo">
+                    <img src="images/footer-logins.jpg" alt="">
+                </div>
+                <div class="about-us">
+                    <p>
+                        <span>关于我们</span>
+                        第一时间获得哈根速递最新商品及活动信息
+                    </p>
+                    <div class="clear_fix">
+                        <a href="#" class="weibo"></a>
+                        <input type="text" value="请输入邮箱地址">
+                        <a href="#" class="subscribed"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-b">
+            <div class="footer-b-con">
+                <div class="footer-nav">
+                    <a href="#">网站导航</a>|
+                    <a href="#">网站导航</a>|
+                    <a href="#">网站导航</a>|
+                    <a href="#">网站导航</a>|
+                    <a href="#">网站导航</a>|
+                    <a href="#">网站导航</a>|
+                    <a href="#">网站导航</a>
+                </div>
+                <div class="footer-beian">
+                    <div class="beian-1">
+                        <a href="#"></a>
+                        <p>版权归通用磨坊贸易（上海有限公司所有）&nbsp;&nbsp;沪ICP备11032068号-4</p>
+                    </div>
+                    <div class="beian-2">
+                        <a href="#"></a>
+                        <p>版权归通用磨坊贸易（上海有限公司所有）&nbsp;&nbsp;沪ICP备11032068号-4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $ClassicSuit = $('.header-nav ul li').eq(1);
+            var $HeadSubmenu = $('.header-submenu');
+            var $shopping = $('.header-nav ul > li').last();
+            var $cart = $('.shop-con');
+            $ClassicSuit.hover(function(){
+                $HeadSubmenu.css('display','block');
+            },function(){
+                $HeadSubmenu.css('display','none');
+            })
+            $shopping.hover(function(){
+                $cart.css('display','block');
+            },function(){
+                $cart.css('display','none');
+            })
+        })
+    </script>
 </body>
 </html>

@@ -4,7 +4,7 @@ body, ol, ul, li, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, leg
   padding: 0; }
 
 body {
-  font-family: "微软雅黑"; }
+  font-family: "宋体"; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
@@ -50,8 +50,7 @@ input {
   width: 980px;
   height: 120px;
   position: relative;
-  margin: auto;
-  background: #0f0; }
+  margin: auto; }
 
 #headerLogo {
   width: 438px;
@@ -61,14 +60,18 @@ input {
   top: 0; }
 
 .header-r {
-  float: right; }
+  float: right;
+  height: 100%; }
 
 .header-r-t {
-  margin-bottom: 32px; }
+  margin-bottom: 32px;
+  height: 21px;
+  padding-top: 6px; }
 
 .header-t-nav {
   float: left;
-  font-size: 12px; }
+  font-size: 12px;
+  padding-top: 4px; }
 
 .header-t-nav li {
   float: left;
@@ -99,25 +102,208 @@ input {
   float: left;
   width: 158px;
   height: 18px;
+  font-size: 12px;
   border-top: 2px solid #dedacf;
   border-left: 2px solid #dedacf;
   border-bottom: 1px solid #b1b1af;
-  line-height: 18px; }
+  line-height: 18px;
+  color: #b1b1b3; }
 
 .header-sousuo {
   float: left;
   width: 24px;
   height: 21px;
-  background: #fff;
+  background: #fff url(../images/ico-magnifying.gif) no-repeat center;
   border-top: 2px solid #dedacf;
   border-right: 1px solid #b1b1af;
-  border-bottom: 1px solid #b1b1af; }
+  border-bottom: 1px solid #b1b1af;
+  cursor: pointer; }
 
-.header-r-m p {
-  text-align: right;
-  font-size: 14px; }
+.header-r-m {
+  height: 14px;
+  line-height: 14px;
+  margin-bottom: 13px; }
+  .header-r-m p {
+    text-align: right;
+    font-size: 14px;
+    color: #f9deb3; }
+    .header-r-m p a {
+      color: #fff; }
 
 .header-r-b {
   text-align: right;
   font-size: 14px;
   font-weight: bold; }
+  .header-r-b a {
+    display: block;
+    width: 180px;
+    height: 22px;
+    float: right;
+    color: #f3d4a5;
+    background: url(../images/header-tel.gif) no-repeat; }
+
+.header-nav {
+  height: 28px;
+  border-top: 1px solid #fef3e1;
+  border-bottom: 1px solid #d0a964;
+  background: #fadeb6;
+  position: relative; }
+  .header-nav ul {
+    width: 965px;
+    margin: auto;
+    padding-left: 15px; }
+    .header-nav ul li {
+      float: left;
+      background: url(../images/nav_line.jpg) no-repeat; }
+    .header-nav ul a {
+      display: block;
+      width: 140px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      font-size: 12px;
+      color: #8b5b2d; }
+    .header-nav ul li:first-of-type {
+      background: none; }
+    .header-nav ul .good-category {
+      width: 200px; }
+    .header-nav ul li:nth-of-type(2):hover .good-category {
+      background: rgba(255, 255, 255, 0.5); }
+    .header-nav ul .shopping-li {
+      position: relative; }
+    .header-nav ul .shopping-cart {
+      padding-left: 28px;
+      width: 112px;
+      background: url(../images/shoppin-cart.jpg) no-repeat 32% center; }
+    .header-nav ul .shopping-li:hover {
+      background: url(../images/idx-nav-cart-hover.gif) no-repeat; }
+    .header-nav ul .header-submenu {
+      width: 200px;
+      position: absolute;
+      padding-top: 12px;
+      background: rgba(255, 255, 255, 0.5);
+      display: none; }
+      .header-nav ul .header-submenu li {
+        clear: both;
+        background: none; }
+      .header-nav ul .header-submenu li a {
+        width: 200px;
+        height: 36px;
+        color: #333; }
+      .header-nav ul .header-submenu li a:hover {
+        color: #8d0020;
+        text-decoration: underline; }
+    .header-nav ul .shop-con {
+      position: absolute;
+      left: -97px;
+      top: 29px;
+      width: 236px;
+      border: 1px solid #adadad;
+      display: none; }
+      .header-nav ul .shop-con h2 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        background: #b13355; }
+      .header-nav ul .shop-con .shop-show {
+        font-size: 12px;
+        color: #000;
+        min-height: 52px;
+        text-align: center;
+        line-height: 52px;
+        background: rgba(255, 255, 255, 0.5); }
+
+.footer-t {
+  height: 112px;
+  background: #b61541 url(../images/footer-buttomimg.jpg) no-repeat center bottom; }
+
+.footer-t-con {
+  width: 1000px;
+  height: 107px;
+  margin: auto; }
+  .footer-t-con .sub-logo {
+    width: 149px;
+    height: 68px;
+    float: left;
+    padding-top: 20px; }
+  .footer-t-con .about-us {
+    float: left;
+    margin-left: 160px;
+    color: #fff;
+    font-size: 14px; }
+    .footer-t-con .about-us p {
+      height: 14px;
+      line-height: 14px;
+      padding-top: 30px;
+      margin-bottom: 14px; }
+      .footer-t-con .about-us p span {
+        margin-right: 40px; }
+    .footer-t-con .about-us div .weibo {
+      float: left;
+      width: 39px;
+      height: 23px;
+      background: url(../images/xle.gif) no-repeat right center;
+      margin-right: 63px; }
+    .footer-t-con .about-us div input {
+      float: left;
+      width: 143px;
+      height: 18px;
+      border-left: 2px solid #ccc;
+      border-top: 2px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding-left: 3px;
+      font-size: 12px;
+      color: #aeaeae;
+      margin-right: 4px; }
+    .footer-t-con .about-us div .subscribed {
+      width: 88px;
+      height: 20px;
+      background: url(../images/emile-imgs.jpg);
+      float: left;
+      margin-top: 1px; }
+
+.footer-b {
+  height: 132px;
+  background: url(../images/footer_bg.png) no-repeat center top; }
+
+.footer-b-con {
+  width: 1000px;
+  height: 132px;
+  margin: auto; }
+  .footer-b-con .footer-nav {
+    padding-top: 38px;
+    text-align: center;
+    font-size: 14px;
+    color: #b59759; }
+    .footer-b-con .footer-nav a {
+      color: #b59759;
+      margin: 0 30px; }
+  .footer-b-con .footer-beian {
+    font-size: 12px;
+    color: #b3965a; }
+    .footer-b-con .footer-beian .beian-1 {
+      float: left;
+      margin-left: 18px; }
+      .footer-b-con .footer-beian .beian-1 a {
+        float: left;
+        width: 47px;
+        height: 47px;
+        background: url(../images/industryremark_l.png) no-repeat; }
+    .footer-b-con .footer-beian .beian-2 {
+      float: left;
+      margin-left: 38px; }
+      .footer-b-con .footer-beian .beian-2 a {
+        float: left;
+        width: 47px;
+        height: 47px;
+        background: url(../images/wangan.png) no-repeat; }
+    .footer-b-con .footer-beian p {
+      height: 12px;
+      line-height: 12px;
+      float: left;
+      margin-top: 34px;
+      margin-left: 3px; }
