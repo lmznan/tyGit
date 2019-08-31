@@ -145,12 +145,12 @@ input{outline:none;border:0;}
         .shopping-li:hover{
             background:url(../images/idx-nav-cart-hover.gif) no-repeat;
         }
-        //二级菜单
+        /*二级菜单*/ 
         .header-submenu{
             width: 200px;
             position: absolute;
             padding-top: 12px;
-            background: rgba(255,255, 255, .5);
+            background: rgba(255,255, 255, .9);
             display: none;
             li{
                 clear: both;
@@ -166,7 +166,7 @@ input{outline:none;border:0;}
                 text-decoration: underline;
             }
         }
-        //头部购物车
+        /*头部购物车*/
         .shop-con{
             position: absolute;
             left: -97px;
@@ -194,8 +194,8 @@ input{outline:none;border:0;}
         }
     }
 }
-// 脚部板块
-// 脚部上半部分
+/* 脚部板块 */
+/* 脚部上半部分 */
 .footer-t{
     height: 112px;
     background: #b61541 url(../images/footer-buttomimg.jpg) no-repeat center bottom;
@@ -269,6 +269,7 @@ input{outline:none;border:0;}
         text-align: center;
         font-size: 14px;
         color: #b59759;
+        margin-bottom: 10px;
         a{
             color: #b59759;
             margin: 0 30px;

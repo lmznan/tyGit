@@ -151,7 +151,9 @@ input {
   .header-nav ul {
     width: 965px;
     margin: auto;
-    padding-left: 15px; }
+    padding-left: 15px;
+    /*二级菜单*/
+    /*头部购物车*/ }
     .header-nav ul li {
       float: left;
       background: url(../images/nav_line.jpg) no-repeat; }
@@ -181,7 +183,7 @@ input {
       width: 200px;
       position: absolute;
       padding-top: 12px;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.9);
       display: none; }
       .header-nav ul .header-submenu li {
         clear: both;
@@ -216,6 +218,8 @@ input {
         line-height: 52px;
         background: rgba(255, 255, 255, 0.5); }
 
+/* 脚部板块 */
+/* 脚部上半部分 */
 .footer-t {
   height: 112px;
   background: #b61541 url(../images/footer-buttomimg.jpg) no-repeat center bottom; }
@@ -278,7 +282,8 @@ input {
     padding-top: 38px;
     text-align: center;
     font-size: 14px;
-    color: #b59759; }
+    color: #b59759;
+    margin-bottom: 10px; }
     .footer-b-con .footer-nav a {
       color: #b59759;
       margin: 0 30px; }

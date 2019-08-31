@@ -1,0 +1,38 @@
+/*大轮播*/
+#bannerWrap{
+    height: 330px;
+    overflow: hidden;
+}
+#bannerBox{
+    width: 1900px;
+    position: absolute;
+    left: 50%;
+    margin-left: -950px;
+    height: 330px;
+}
+.banner-img{
+    width: 9500px;
+    position: absolute;
+    left: px;
+    li{
+        float: left;
+    }
+}
+.banner-dot{
+    position: absolute;
+    left: 1250px;
+    bottom: 16px;
+    li{
+        width: 20px;
+        height: 20px;
+        background: #eccb98;
+        color: #955a22;
+        text-align: center;
+        line-height: 20px;
+        float: left;
+        margin: 0 10px;
+    }
+    li:hover{
+        cursor: pointer;
+    }
+}
