@@ -97,18 +97,42 @@ $(function(){
                 }
             }
             new slider(id);
-        }
+        },
         /* 复杂轮播 */
         banner2 : function(selector){
             //获取大图片盒子
             let oBigBox = document.querySelector(selector);
             //获取所有图片
-            let 
+            let oImgs = oBigBox.children[1].children[0].children;
+            //计算图片数量
+            let oNum = oImgs.length;
+            //获取图片对应内容盒子
+            let oConBox = oBigBox.children[2];
+            //获取左按钮
+            let oLeft = oConBox.firstElementChild;
+            //获取右按钮
+            let oRight = oConBox.lastElementChild;
+            //获取所有对应内容
+            let oCons = oConBox.children[1].children;
+            //记录公共下标
+            let index = 0;
+            //添加事件
+            //移入图片
+            for(let i = 0;i < oNum;i ++){
+                oImgs[i].onmouseenter = function(){
+                    index = i;
+                    for(let j = 0;j < oNum;j ++){
+                        $(oImgs[j]).removeClass('cur')
+                    }
+                    $(this).addClass('cur');
+                }
+            }
         } 
     })
     
-   //大图轮播
+
    $.banner('#bannerBox');
+    $.banner2('#sweetMoments');
 })
 
 

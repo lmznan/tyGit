@@ -123,6 +123,7 @@
 #sweetMoments{
     min-height: 500px;
     padding-top: 50px;
+    margin-bottom: 80px;
     h2{
         font-size: 15px;
         font-weight: bold;
@@ -134,13 +135,17 @@
         margin-bottom: 10px;
     }
     .butter-switch ul{
-        position: relative;
+        // position: relative;
         li{
-            width: 350px;
-            position: absolute;
+            width: 210px;
+            float: left;
+            position: relative;
+            overflow: hidden;
             a{
+                display: block;
                 width: 350px;
                 height: 350px;
+                position: relative;
                 img{
                     width: 100%;
                     height: 100%;
@@ -168,7 +173,89 @@
             }
         }
         .cur{
-            width: 210px;
+            width: 350px;
+            a{
+                position: relative;
+                left: 0;
+                transition: 1s;
+            }
+            .txt{
+                background-position-y: -77px; 
+            }
+            .mark{
+                display: none;
+            }
         }
-    } 
+    }
+    //大图对应内容
+    .content-cake{
+        position: relative;
+        overflow: hidden;
+        .lt-btn{
+            
+        }
+        .cake-wrap{
+           width: 9800px;
+           margin-top: 20px;
+            position: relative;
+            .cake-item{
+                width: 980px;
+                height: 306px;
+                overflow: hidden;
+                float: left;
+                ul li{
+                    float: left;
+                    width: 212px;
+                    margin: 0 15px;
+                    .good-img{
+                        width: 210px;
+                        height: 210px;
+                    }
+                    h4{
+                        height: 18px;
+                        padding-top: 14px;
+                        a{
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: #545454;
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                            color: #f00;
+                        }
+                    }
+                    .good-money{
+                        height: 26px;
+                        padding-top: 6px;
+                        position: relative;
+                        font-family: Arial;
+                        font-size: 12px;
+                        color: #535351;
+                        span{
+                            position: absolute;
+                            right: 0;
+                            font-size: 16px;
+                            color: #a0002c;
+                            i{
+                                font-size: 12px;
+                                color: #535351;
+                            }
+                        }
+                    }
+                    .now-buy{
+                        height: 31px;
+                        text-align: center;
+                        line-height: 31px;
+                        font-size: 12px;
+                        a{
+                            display: block;
+                            height: 31px;
+                            color: #fff;
+                            background: url(../images/pro-list-add-buy.gif) no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
