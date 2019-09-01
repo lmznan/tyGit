@@ -4,18 +4,20 @@
     overflow: hidden;
 }
 #bannerBox{
-    width: 1900px;
-    position: absolute;
-    left: 50%;
-    margin-left: -950px;
+    width: 100%;
+    position: relative;
     height: 330px;
+    overflow: hidden;
 }
 .banner-img{
-    width: 9500px;
+    width: 11400px;
+    height: 330px;
     position: absolute;
-    left: px;
+    left: -300px;
+    transition: 1s;
     li{
         float: left;
+        width: 1900px;
     }
 }
 .banner-dot{
@@ -32,7 +34,141 @@
         float: left;
         margin: 0 10px;
     }
+    .current{
+        background: #fff;
+        color: #900021;
+    }
     li:hover{
         cursor: pointer;
     }
+}
+/* main */
+#mainWrap{
+    min-height: 500px;
+    background: url(../images/background-indeximg.jpg) no-repeat center top;
+}
+.main-con{
+    width: 980px;
+    min-height: 400px;
+    margin: auto;
+}
+//明星产品
+#heroProducts{
+    padding-top: 58px;
+    h2{
+        font-size: 15px;
+        font-weight: bold;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 12px;
+        border-bottom: 1px solid #b59656;
+        color: #b59656;
+    }
+    ul li{
+        float: left;
+        width: 212px;
+        padding-top: 20px;
+        margin: 0 15px;
+        .good-img{
+            width: 210px;
+            height: 210px;
+            border: 1px solid #eceaeb;
+        }
+        h4{
+            height: 18px;
+            padding-top: 14px;
+            a{
+                font-size: 14px;
+                line-height: 18px;
+                color: #545454;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: #f00;
+            }
+        }
+        .good-money{
+            height: 26px;
+            padding-top: 6px;
+            position: relative;
+            font-family: Arial;
+            font-size: 12px;
+            color: #535351;
+            span{
+                position: absolute;
+                right: 0;
+                font-size: 16px;
+                color: #a0002c;
+                i{
+                    font-size: 12px;
+                    color: #535351;
+                }
+            }
+        }
+        .now-buy{
+            height: 31px;
+            text-align: center;
+            line-height: 31px;
+            font-size: 12px;
+            a{
+                display: block;
+                height: 31px;
+                color: #fff;
+                background: url(../images/pro-list-add-buy.gif) no-repeat;
+            }
+        }
+    }
+}
+//复杂轮播 甜蜜时刻
+#sweetMoments{
+    min-height: 500px;
+    padding-top: 50px;
+    h2{
+        font-size: 15px;
+        font-weight: bold;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 12px;
+        border-bottom: 1px solid #b59656;
+        color: #b59656;
+        margin-bottom: 10px;
+    }
+    .butter-switch ul{
+        position: relative;
+        li{
+            width: 350px;
+            position: absolute;
+            a{
+                width: 350px;
+                height: 350px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .txt{
+                height: 73px;
+                background: url(../images/shutter_bg.gif) no-repeat center top;
+                h4{
+                    height: 16px;
+                    line-height: 16px;
+                    text-align: right;
+                    padding-right: 15px;
+                    color: #fff;
+                    padding-top: 16px;
+                }
+            }
+            .mark{
+                width: 350px;
+                height: 350px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: rgba(0,0,0,.5);
+            }
+        }
+        .cur{
+            width: 210px;
+        }
+    } 
 }

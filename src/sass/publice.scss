@@ -149,8 +149,9 @@ input{outline:none;border:0;}
         .header-submenu{
             width: 200px;
             position: absolute;
+            z-index: 100;
             padding-top: 12px;
-            background: rgba(255,255, 255, .9);
+            background: rgba(255,255, 255, .8);
             display: none;
             li{
                 clear: both;
@@ -171,6 +172,7 @@ input{outline:none;border:0;}
             position: absolute;
             left: -97px;
             top: 29px;
+            z-index: 100;
             width: 236px;
             border: 1px solid #adadad;
             display: none;
@@ -189,7 +191,7 @@ input{outline:none;border:0;}
                 min-height: 52px;
                 text-align: center;
                 line-height: 52px;
-                background: rgba(255,255,255, .5)
+                background: rgba(255,255,255, .8)
             }
         }
     }
