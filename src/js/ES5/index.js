@@ -7,28 +7,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 $(function () {
-  //导入头部
-  var $head = $('#headerLink');
-  $head.load('public.html #headerWrap', function () {
-    var $ClassicSuit = $('.header-nav ul li').eq(1);
-    var $HeadSubmenu = $('.header-submenu');
-    var $shopping = $('.header-nav ul > li').last();
-    var $cart = $('.shop-con');
-    $ClassicSuit.hover(function () {
-      $HeadSubmenu.css('display', 'block');
-    }, function () {
-      $HeadSubmenu.css('display', 'none');
-    });
-    $shopping.hover(function () {
-      $cart.css('display', 'block');
-    }, function () {
-      $cart.css('display', 'none');
-    });
-  }); //导入脚部
-
-  var $footer = $('#footerLink');
-  $footer.load('public.html #footerWrap'); //插件
-
+  //插件
   $.extend({
     /* 大图轮播 */
     banner: function banner(id) {
@@ -49,13 +28,16 @@ $(function () {
             //获取图片盒子
             this.imgUl = this.bannerBox.children[0]; //获取所有图片li
 
-            this.ullis = this.imgUl.children; //获取图片数量
+            this.ullis = this.imgUl.children; //计算图片数量
 
             this.imgnum = this.ullis.length; //获取所有小圆点
 
             this.ollis = this.bannerBox.children[1].children; //复制第一张图放在最后
 
-            this.imgUl.appendChild(this.ullis[0].cloneNode(true)); //定义大图当前下标
+            this.imgUl.appendChild(this.ullis[0].cloneNode(true)); //定义图片盒子初始位置
+
+            this.initLeft = (this.ullis[0].offsetWidth - 980) / 2;
+            this.imgUl.style.left = -this.initLeft + 'px'; //定义大图当前下标
 
             this.indexA = 0; //定义小圆点当前下标
 
@@ -66,13 +48,21 @@ $(function () {
             this.slide();
             this.addEvent();
             this.autoPlay();
+          } //获取非行内样式
+
+        }, {
+          key: "getStyle",
+          value: function getStyle(obj, attr) {
+            return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, 1)[attr];
           } //轮播
 
         }, {
           key: "slide",
           value: function slide() {
             //大图。改变存放大图的盒子left值。
-            this.imgUl.style.left = -(300 + this.indexA * this.ullis[0].offsetWidth) + 'px'; //小圆点
+            this.sport(this.imgUl, {
+              left: -(this.initLeft + this.indexA * this.ullis[0].offsetWidth)
+            }); //小圆点
 
             for (var i = 0; i < this.imgnum; i++) {
               this.ollis[i].className = '';
@@ -110,7 +100,7 @@ $(function () {
 
               if (_this2.indexA > _this2.imgnum) {
                 _this2.indexA = 1;
-                _this2.imgUl.style.left = -300 + 'px';
+                _this2.imgUl.style.left = -_this2.initLeft + 'px';
               }
 
               _this2.indexB++;
@@ -129,6 +119,42 @@ $(function () {
             this.bannerBox.onmouseleave = function () {
               _this2.autoPlay();
             };
+          } //运动
+
+        }, {
+          key: "sport",
+          value: function sport(obj, json, fn) {
+            var _this3 = this;
+
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+              var flag = true;
+
+              for (var attr in json) {
+                var cur = attr === 'opacity' ? Math.floor(parseFloat(_this3.getStyle(obj, attr)) * 100) : parseInt(_this3.getStyle(obj, attr));
+                var speed = (json[attr] - cur) / 8;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+                if (cur !== json[attr]) {
+                  flag = false;
+                }
+
+                if (attr === 'opacity') {
+                  obj.style.opacity = (cur + speed) / 100;
+                  obj.style.filter = 'alpha(opacity=' + (cur + speed) + ')';
+                } else {
+                  obj.style[attr] = cur + speed + 'px';
+                }
+              }
+
+              if (flag) {
+                if (fn instanceof Function) {
+                  fn();
+                }
+
+                clearInterval(obj.timer);
+              }
+            }, 30);
           }
         }]);
 

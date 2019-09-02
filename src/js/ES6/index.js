@@ -1,26 +1,4 @@
 $(function(){
-    //导入头部
-    var $head = $('#headerLink');
-    $head.load('public.html #headerWrap',function(){
-        var $ClassicSuit = $('.header-nav ul li').eq(1);
-        var $HeadSubmenu = $('.header-submenu');
-        var $shopping = $('.header-nav ul > li').last();
-        var $cart = $('.shop-con');
-        $ClassicSuit.hover(function(){
-            $HeadSubmenu.css('display','block');
-        },function(){
-            $HeadSubmenu.css('display','none');
-        })
-        $shopping.hover(function(){
-            $cart.css('display','block');
-        },function(){
-            $cart.css('display','none');
-        })
-    });
-    //导入脚部
-    var $footer = $('#footerLink');
-    $footer.load('public.html #footerWrap');
- 
     //插件
     $.extend({
         /* 大图轮播 */
@@ -36,12 +14,15 @@ $(function(){
                     this.imgUl = this.bannerBox.children[0];
                     //获取所有图片li
                     this.ullis = this.imgUl.children;
-                    //获取图片数量
+                    //计算图片数量
                     this.imgnum = this.ullis.length;
                     //获取所有小圆点
                     this.ollis = this.bannerBox.children[1].children;
                     //复制第一张图放在最后
                     this.imgUl.appendChild(this.ullis[0].cloneNode(true));
+                    //定义图片盒子初始位置
+                    this.initLeft = (this.ullis[0].offsetWidth - 980) / 2;
+                    this.imgUl.style.left = -this.initLeft + 'px';
                     //定义大图当前下标
                     this.indexA = 0;
                     //定义小圆点当前下标
@@ -53,10 +34,14 @@ $(function(){
                     this.addEvent();
                     this.autoPlay();
                 }
+                //获取非行内样式
+                getStyle(obj, attr) {
+                    return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, 1)[attr];
+                }
                 //轮播
                 slide(){
                     //大图。改变存放大图的盒子left值。
-                    this.imgUl.style.left = - (300 + this.indexA * this.ullis[0].offsetWidth) + 'px';
+                    this.sport(this.imgUl,{left : - (this.initLeft + this.indexA * this.ullis[0].offsetWidth)});
                     //小圆点
                     for(let i = 0;i < this.imgnum;i ++){
                         this.ollis[i].className = '';
@@ -80,7 +65,7 @@ $(function(){
                         this.indexA ++;
                         if(this.indexA > this.imgnum){
                             this.indexA = 1;
-                            this.imgUl.style.left = -300 + 'px';
+                            this.imgUl.style.left = -this.initLeft + 'px';
                         }
                         this.indexB ++;
                         if(this.indexB > this.imgnum - 1){
@@ -95,6 +80,33 @@ $(function(){
                         this.autoPlay();
                     }
                 }
+                //运动
+                sport(obj, json, fn) {
+                    clearInterval(obj.timer);
+                    obj.timer = setInterval(() => {
+                        let flag = true;
+                        for (let attr in json) {
+                            let cur = attr === 'opacity' ? Math.floor(parseFloat(this.getStyle(obj, attr)) * 100) : parseInt(this.getStyle(obj, attr));
+                            let speed = (json[attr] - cur) / 8;
+                            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                            if (cur !== json[attr]) {
+                                flag = false;
+                            }
+                            if (attr === 'opacity') {
+                                obj.style.opacity = (cur + speed) / 100;
+                                obj.style.filter = 'alpha(opacity=' + (cur + speed) + ')';
+                            } else {
+                                obj.style[attr] = cur + speed + 'px';
+                            }
+                        }
+                        if (flag) {
+                            if (fn instanceof Function) {
+                                fn();
+                            }
+                            clearInterval(obj.timer);
+                        }
+                    }, 30);
+                } 
             }
             new slider(id);
         },
@@ -127,11 +139,11 @@ $(function(){
                     $(this).addClass('cur');
                 }
             }
-        } 
+        }
     })
     
 
-   $.banner('#bannerBox');
+    $.banner('#bannerBox');
     $.banner2('#sweetMoments');
 })
 

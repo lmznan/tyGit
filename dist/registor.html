@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页</title>
+    <link rel="stylesheet" href="css/publice.min.css">
+    <link rel="stylesheet" href="css/registor.min.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/public.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+    <div id="headerLink"></div>
+    <div class="bodyer-all clear_fix">
+        <div class="register-content">
+            <!-- 左部分 -->
+            <div class="reg-con">
+                <form action="">
+                    <h3>
+                        设置账户信息
+                        <i>&gt;</i>
+                        <span>完善个人信息</span>
+                    </h3>
+                    <h4>会员注册</h4>
+                    <!-- 手机 -->
+                    <dl class="clear_fix reg-tel">
+                        <dt>
+                            <span>*</span>
+                            手机:
+                        </dt>
+                        <dd>
+                            <input type="text" placeholder="请确保您的信息真实有效">
+                            <span></span>
+                        </dd>
+                    </dl>
+                    <!-- 验证码 -->
+                    <dl class="clear_fix reg-code">
+                        <dt>
+                            <span>*</span>
+                            验证码:
+                        </dt>
+                        <dd>
+                            <input type="text" placeholder="">
+                            <span class="ven-code"></span>
+                        </dd>
+                    </dl>
+                    <!-- 短信验证码 -->
+                    <dl class="clear_fix">
+                        <dt>
+                            <span>*</span>
+                            短信验证码:
+                        </dt>
+                        <dd>
+                            <input type="text" placeholder="" class="txt-msg">
+                            <input type="button" class="get-msg" value="点击获取验证码">
+                            <span class="msg-ts"></span>
+                        </dd>
+                    </dl>
+                    <!-- 密码 -->
+                    <dl class="clear_fix reg-pwd">
+                        <dt>
+                            <span>*</span>
+                            密码:
+                        </dt>
+                        <dd>
+                            <input type="password" placeholder="密码长度在6-12之间">
+                            <span></span>
+                        </dd>
+                    </dl>
+                    <!-- 确认密码 -->
+                    <dl class="clear_fix reg-subPwd">
+                        <dt>
+                            <span>*</span>
+                            确认密码:
+                        </dt>
+                        <dd>
+                            <input type="password" placeholder="密码长度在6-12之间">
+                            <span></span>
+                        </dd>
+                    </dl>
+                    <input type="submit" value="下一步" class="registor-sub">
+                </form>
+            </div>
+            <!-- 右部分 -->
+            <div class="go-otherLink">
+                <div class="go-login">
+                    <h2>已有账号，直接登录</h2>
+                    <a href="login.html">登录</a>
+                    <p>成为哈根速递会员您将获得官方品质保证，尽享
+                        会员礼遇，及时获知哈根达斯最新商品信息。</p>
+                </div>
+                <div class="yq-link other-link clear_fix">
+                    <h4>合作网站登录</h4>
+                    <a href="#">支付宝</a>
+                    <a href="#">新浪微博</a>
+                    <a href="#">腾讯QQ</a>
+                </div>
+                <div class="visitor-pass other-link">
+                    <h4>游客通道</h4>
+                    <a href="#">游客通道</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="mask">
+        <div class="mask-con clear_fix">
+            <span></span>
+            <p>输入的验证码不正确，请重新输入！</p>
+            <input type="button" name="" id="" value="确定">
+        </div>
+    </div> -->
+    <div id="footerLink"></div>
+    
+    <script src="js/registor.min.js"></script>
+</body>
+</html>

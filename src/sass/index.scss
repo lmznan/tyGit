@@ -4,25 +4,25 @@
     overflow: hidden;
 }
 #bannerBox{
-    width: 100%;
+    width: 980px;
+    margin: auto;
     position: relative;
     height: 330px;
-    overflow: hidden;
 }
 .banner-img{
     width: 11400px;
     height: 330px;
     position: absolute;
-    left: -300px;
-    transition: 1s;
     li{
         float: left;
         width: 1900px;
     }
 }
 .banner-dot{
+    width: 200px;
+    height: 20px;
     position: absolute;
-    left: 1250px;
+    left: 790px;
     bottom: 16px;
     li{
         width: 20px;
