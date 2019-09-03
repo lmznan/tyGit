@@ -5,8 +5,7 @@
 .goods-information {
   width: 980px;
   margin: auto;
-  min-height: 300px;
-  background: pink; }
+  min-height: 300px; }
   .goods-information .goods-tit {
     height: 12px;
     line-height: 12px;
@@ -39,8 +38,7 @@
         position: absolute;
         left: -15px;
         top: -15px;
-        border: 1px solid #cfcecc;
-        display: none; }
+        border: 1px solid #cfcecc; }
         .goods-information .goods-content .goods-magnifier .goods-slide img {
           position: absolute;
           left: 0;
@@ -51,7 +49,6 @@
         position: absolute;
         left: -15px;
         top: -15px;
-        background: rgba(0, 0, 0, 0.5);
         display: none; }
     .goods-information .goods-content .goods-con {
       float: left; }

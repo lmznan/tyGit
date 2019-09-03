@@ -22,7 +22,24 @@ $(function(){
     })
     $mask.mousemove(function(evt){
         //滑块移动边界
-        let $left = e.pageX - oSlider.offsetWidth / 2 - oDiv.offsetLeft - oSmallPic.offsetLeft;
-            let top = e.pageY - oSlider.offsetHeight / 2 - oDiv.offsetTop - oSmallPic.offsetTop;
+        let left = evt.pageX - $slide.outerWidth() / 2 - $mask.offset().left + $mask.position().left;
+        let top = evt.pageY - $slide.outerHeight() / 2 - $mask.offset().top + $mask.position().top;
+        if(left <= $mask.position().left){
+            left = $mask.position().left;
+        }else if(left >= $mask.innerWidth() - $slide.outerWidth() + $mask.position().left){
+            left = $mask.innerWidth() - $slide.outerWidth() + $mask.position().left;
+        }
+        if(top <= $mask.position().top){
+            top = $mask.position().top;
+        }else if(top >= $mask.innerHeight() - $slide.outerHeight() + $mask.position().top){
+            top = $mask.innerHeight() - $slide.outerHeight() + $mask.position().top;
+        }
+        $slide.css('left',`${left}px`);
+        $slide.css('top',`${top}px`);
+        //移动比例
+        let ProX = left / ($mask.innerWidth() - $slide.outerWidth());
+        let ProY = top / ($mask.innerHeight() - $slide.outerHeight());
+        $slimg.css('left',`${-ProX * ($slimg.outerWidth() - $slide.innerWidth()- 76) - 64}px`);
+        $slimg.css('top',`${-ProY * ($slimg.outerHeight() - $slide.innerHeight()- 76) - 64}px`);
     })
 })
