@@ -1,0 +1,150 @@
+.bodyer-all{
+    background: url(../images/background-indeximg2.jpg) repeat-y center top;
+}
+// 安全区
+.bodyer-con{
+    width: 980px;
+    min-height: 200px;
+    margin: auto;
+}
+//分类信息部分
+.Information-conent{
+    height: 111px;
+    border-bottom: 1px solid #b49759;
+    margin-bottom: 20px;
+    .list-tit{
+        height: 12px;
+        font-size: 12px;
+        color: #b49759;
+        padding-top: 41px;
+        padding-bottom: 16px;
+        a{
+            color: #b49759;
+        }
+    }
+    .category-con{
+        ul li{
+            float: left;
+            font-size: 12px;
+            a{
+                display: block;
+            }
+        }
+        .category-one{
+            float: left;
+            li{
+                border-right: 1px solid #d7b079;
+                a{
+                    height: 14px;
+                    background: #fadeb6;
+                    color: #000;
+                    line-height: 14px;
+                    padding: 4px 27px 0;
+                }
+            }
+            li:last-child{
+                border-right: none;
+            }
+        }
+        .category-two{
+            float: right;
+            li{
+                margin: 0 3px;
+                padding: 0 12px;
+                background: #fadeb6;
+                border-radius: 8px;;
+                a{
+                    height: 18px; 
+                    color: #976936;
+                    line-height: 18px;
+                }
+            }
+            .cur{
+                background: #cd1d4e;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+//商品列表部分
+.good-list{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li{
+            float: left;
+            width: 310px;
+            margin-bottom: 60px;
+            font-family: Arial,"宋体",simhei,sans-serif;
+            .good-img{
+                position: relative;
+                width: 310px;
+                height: 310px;
+                border: 1px solid #eceaeb;
+                i{
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 82px;
+                    height: 19px;
+                    background: url(../images/click-collection-img.jpg) no-repeat;
+                    display: none;
+                }
+            }
+            h4{
+                height: 14px;
+                padding-top: 15px;
+                a{
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: #545454;
+                }
+                a:hover{
+                    text-decoration: underline;
+                    color: #cd1d4e;
+                }
+            }
+            .good-money{
+                height: 26px;
+                padding-top: 6px;
+                position: relative;
+                font-family: Arial;
+                font-size: 14px;
+                color: #535351;
+                span{
+                    position: absolute;
+                    right: 0;
+                    font-size: 20px;
+                    color: #a0002c;
+                    i{
+                        font-size: 12px;
+                        color: #535351;
+                    }
+                }
+            }
+            p{
+                height: 12px;
+                font-size: 12px;
+                color: #959595;
+                margin-bottom: 14px;
+            }
+            .now-buy{
+                height: 31px;
+                text-align: center;
+                line-height: 31px;
+                font-size: 14px;
+                font-weight: bold;
+                a{
+                    display: block;
+                    height: 31px;
+                    color: #fff;
+                    background: url(../images/pro-list-add-buy.gif) no-repeat;
+                }
+            }
+        }
+    } 
+}

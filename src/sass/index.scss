@@ -70,9 +70,20 @@
         padding-top: 20px;
         margin: 0 15px;
         .good-img{
+            position: relative;
             width: 210px;
             height: 210px;
             border: 1px solid #eceaeb;
+            i{
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 82px;
+                height: 19px;
+                background: url(../images/click-collection-img.jpg) no-repeat;
+                display: none;
+            }
         }
         h4{
             height: 18px;

@@ -65,9 +65,19 @@
     padding-top: 20px;
     margin: 0 15px; }
     #heroProducts ul li .good-img {
+      position: relative;
       width: 210px;
       height: 210px;
       border: 1px solid #eceaeb; }
+      #heroProducts ul li .good-img i {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 82px;
+        height: 19px;
+        background: url(../images/click-collection-img.jpg) no-repeat;
+        display: none; }
     #heroProducts ul li h4 {
       height: 18px;
       padding-top: 14px; }

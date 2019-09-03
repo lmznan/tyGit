@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/login.min.css">
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/public.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
 </head>
 <body>
     <div id="headerLink"></div>
@@ -22,7 +23,7 @@
                         <div class="club-login">哈根达斯俱乐部会员登录</div>
                     </div>
                     <!-- 手机 -->
-                    <dl class="clear_fix">
+                    <dl class="clear_fix del-eml">
                         <dt>
                             邮箱/手机:
                         </dt>
@@ -32,7 +33,7 @@
                         </dd>
                     </dl>
                     <!-- 密码 -->
-                    <dl class="clear_fix">
+                    <dl class="clear_fix log-pwd">
                         <dt>
                             密码:
                         </dt>
@@ -42,17 +43,21 @@
                         </dd>
                     </dl>
                     <!-- 验证码 -->
-                    <dl class="clear_fix">
+                    <dl class="clear_fix log-code">
                         <dt>
                             验证码:
                         </dt>
                         <dd>
                             <input type="text" placeholder="">
                             <span class="ven-code"></span>
+                            <span class="code-ts"></span>
                         </dd>
                     </dl>
+                    <div class="error-ts">
+                        <span></span>
+                    </div>
                     <div class="login-sub">
-                        <input type="submit" value="登录" >
+                        <input type="button" value="登录" >
                         <a href="#">忘记密码</a>
                     </div>
                     <p class="login-xieyi">
@@ -83,5 +88,6 @@
         </div>
     </div>
     <div id="footerLink"></div>
+    <script src="js/login.min.js"></script>
 </body>
 </html>

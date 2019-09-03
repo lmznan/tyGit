@@ -1,0 +1,221 @@
+//bodyer-all
+.bodyer-all{
+    padding-top: 120px;
+    padding-bottom: 228px;
+    background: url(../images/background-indeximg2.jpg) no-repeat center top;
+}
+.login-content{
+    width: 982px;
+    height: 420px;
+    background: #f9f6f1;
+    margin: auto;
+    //注册板块左部分
+    .log-con{
+        float: left;
+        width: 660px;
+        height: 418px;
+        border: 1px solid #dedede;
+        border-right-color: #ccc;
+        .login-pass{
+            margin-bottom: 21px;
+            div{
+                float: left;
+                text-align: center;
+                line-height: 36px;
+                font-weight: bold;
+            }
+            .speed-login{
+                width: 329px;
+                height: 38px;
+                background: url(../images/red_line.jpg) no-repeat center top;
+                color: #8c5b29;
+            }
+            .club-login{
+                width: 330px;
+                height: 37px;
+                border-left: 1px solid #dedede;
+                border-bottom: 1px solid #dedede;
+                background: #fff;
+                color: #aaa;
+            }
+        }
+        dl{
+            margin-bottom: 25px;
+            padding-left: 24px;
+            dt{
+                width: 183px;
+                height: 26px;
+                float: left;
+                font-size: 12px;
+                color: #545454;
+                line-height: 26px;
+                text-align: right;
+                padding-right: 15px;
+            }
+            dd{
+                float: left;
+                input{
+                    float: left;
+                    width: 240px;
+                    height: 23px;
+                    border-top: 3px solid #e8e3df;
+                    border-left: 3px solid #e8e3df;
+                    font-size: 12px;
+                    line-height: 23px;
+                    padding-left: 3px;
+                }
+                .txt-msg{
+                    width: 124px;
+                }
+                .get-msg{
+                    float: left;
+                    width: 107px;
+                    height: 16px;
+                    background: #fae0bb;
+                    color: #666666;
+                    font-size: 12px;
+                    text-align: center;
+                    line-height: 16px;
+                    padding-top: 2px;
+                    margin-top: 3px;
+                    margin-left: 10px;
+                }
+                .get-msg:hover {
+                    cursor: pointer;
+                }
+                .ven-code{
+                    display: block;
+                    float: left;
+                    width: 78px;
+                    height: 23px;
+                    border: 1px solid #e0dfdd;
+                    background: #848484;
+                    text-align: center;
+                    line-height: 25px;
+                    padding: 1px;
+                    margin-left: 5px;
+                    color: #fff;
+                }
+                span{
+                    font-size: 12px;
+                    color: #bc1447;
+                    line-height: 26px;
+                    padding-left: 5px;
+                }
+            }
+        }
+        .error-ts{
+            height: 15px;
+            padding-left: 220px;
+            span{
+                text-align: center;
+                font-size: 12px;
+                line-height: 15px;
+                color: #bc1447;
+            }
+        }
+        .login-sub{
+            padding-top: 24px;
+            margin-bottom: 20px;
+            input{
+                width: 124px;
+                height: 30px;
+                background: #9e002b;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+                line-height: 30px;
+                margin-left: 222px;
+            }
+            a{
+                font-size: 12px;
+                color: #333;
+                text-decoration: underline;
+            }
+        } 
+        .login-sub:hover input{
+            cursor: pointer;
+        }
+        .login-xieyi{
+            margin-left: 218px;
+            font-size: 13px;
+            line-height: 14px;
+            color: #545454;
+            a{
+                color: #9e002b;
+            }
+        }
+    }
+    //注册版块右部分
+    .go-otherLink{
+        float: left;
+        width: 289px;
+        height: 418px;
+        border: 1px solid #dedede;
+        border-left: none;
+        padding-left: 30px;
+        .go-registor{
+            h2{
+                height: 16px;
+                color: #8c5b29;
+                line-height: 16px;
+                font-weight: bold;
+                padding-top: 36px;
+                letter-spacing: 0;
+            }
+            a{
+                display: block;
+                width: 124px;
+                height: 30px;
+                background: #9e002b;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+                line-height: 30px;
+                margin: 34px 0 20px 0;
+            }
+            p{
+                color: #545454;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 1px;
+                margin-bottom: 42px;
+            }
+        }
+        .other-link{
+            h4{
+                height: 16px;
+                color: #8c5b29;
+                line-height: 16px;
+                font-weight: bold;
+                letter-spacing: 0;
+                margin-bottom: 10px;
+            }
+            a{
+                float: left;
+                height: 16px;
+                line-height: 16px;
+                font-size: 12px;
+                color: #333333;
+                padding-left: 20px;
+                padding-right: 7px;
+                background: url(../images/coop-icon.png)no-repeat;
+                margin-right: 5px;
+            }
+            a:nth-of-type(2){
+                padding-left: 26px;
+                background-position: -83px 0;
+            }
+            a:nth-of-type(3){
+                padding-left: 26px;
+                background-position: -184px 0;
+            }
+        }
+        .yq-link{
+            margin-bottom: 43px;
+        }
+        .visitor-pass a{
+             background: url(../images/visitor.png)no-repeat;
+        }
+    }
+}
