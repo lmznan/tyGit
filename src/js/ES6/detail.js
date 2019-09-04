@@ -203,6 +203,17 @@ $(function(){
             storageObj[$gdname] = JSON.stringify(goodObj);
         }
         storage.carts = JSON.stringify(storageObj);
+        $('body').append('<div class="mask"><div class="mask-con clear_fix"><span></span><p>商品已经加入购物车</p><input type="button" name="" id="" value="继续购物"><input type="button" name="" id="" value="去购物车结算"></div></div>');
+        $('.mask-con span').click(function(){
+            $('.mask').remove();
+        })
+        $('.mask-con input').first().click(function(){
+            $('.mask').remove();
+        })
+        $('.mask-con input').last().click(function(){
+            $('.mask').remove();
+            location.href = 'cart.html';
+        })
     })
     function convertStorageStrTOStorageObj(str){
         if(!str){
