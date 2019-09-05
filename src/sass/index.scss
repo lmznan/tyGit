@@ -202,9 +202,6 @@
     .content-cake{
         position: relative;
         overflow: hidden;
-        .lt-btn{
-            
-        }
         .cake-wrap{
            width: 9800px;
            margin-top: 20px;
@@ -269,4 +266,35 @@
             }
         }
     }
+}
+// 回到顶部
+.go-top{
+    width: 144px;
+    height: 82px;
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    a{
+        display: block;
+        width: 94px;
+        height: 35px;
+        background: url(../images/top-bg.png) no-repeat center top;
+        color: #eecd9c;
+        line-height: 35px;
+        padding-left: 50px;
+    }
+    p{
+        width: 139px;
+        height: 47px;
+        margin: auto;
+        background: url(../images/top-bg.png) no-repeat center bottom;
+        text-align: center;
+        color: #955b24;
+        line-height: 47px;
+    }
+}
+.go-top:hover{
+    cursor: pointer;
 }

@@ -50,8 +50,8 @@
         table{
             width: 100%;
             .no-goods{
-                display: none;
                 .ba-color{
+                    width:988px;
                     div{
                         height: 116px;
                         text-align: center;
@@ -63,19 +63,127 @@
                     }
                 }
             } 
+            //添加商品后
             .delivery-tit{
+                width: 100%;
                 font-size: 12px;
                 color: #464646;
+                display: none;
                 th{
                     height: 22px;
                     text-align: center;
                     line-height: 22px;
+                    padding-right: 4px;
+                    background: #dfdfdf url(../images/boxicon.png) no-repeat right center;
+                }
+                th:first-child{
+                    width: 84px;
+                }
+                th:nth-of-type(2){
+                    width: 338px;
+                }
+                th:nth-of-type(3){
+                    width: 123px;
+                }
+                th:nth-of-type(4){
+                    width: 172px;
+                }
+                th:nth-of-type(5){
+                    width: 113px;
+                }
+                th:nth-of-type(6){
+                    width: 128px;
+                    background: #dfdfdf;
+                }
+            }
+            .goods-show{
+                height: 114px;
+                font-size: 12px;
+                border-bottom: 1px dashed #cfcecb;
+                td{
+                    height: 114px;
+                    text-align: center;
+                    line-height: 114px;
+                }
+                td:nth-of-type(1){
+                    width: 88px;
+                }
+                td:nth-of-type(2){
+                    dl{
+                        dt{
+                            float: left;
+                            width: 100px;
+                            height: 100px;
+                            border: 1px solid #c2c2c2;
+                            margin-top: 6px;
+                            margin-right: 28px;
+                            margin-left: 7px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        dd{
+                            color: #333;
+                            float: left;
+                            line-height: 20px;
+                            margin-top: 26px;
+                            text-align: left;
+                            a{
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+                td:nth-of-type(3){
+                    width: 127px;
+                    font-weight: bold;
+                    color: #535353;
+                    font-size: 16px;
+                }
+                td:nth-of-type(4){
+                    width: 176px;
+                    div{
+                        width: 86px;
+                        margin: auto;
+                    }
+                    input{
+                        display: block;
+                        float: left;
+                        width: 19px;
+                        height: 18px;
+                        background: url(../images/pdp_13.jpg) no-repeat;
+                    }
+                    input:nth-of-type(1):hover{
+                        cursor: pointer;
+                    }
+                    input:nth-of-type(3):hover{
+                        cursor: pointer;
+                    }
+                    input:nth-of-type(2){
+                        width: 36px;
+                        height: 22px;
+                        background: url(../images/icn-text.jpg) no-repeat;
+                        margin: 0 6px;
+                        text-align: center;
+                    }
+                }
+                td:nth-of-type(5){
+                    width: 117px;
+                    color: #b61541;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                td:nth-of-type(6){
+                    a{
+                        color: #535353;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
     }
     .go-back{
-        display: none;
         text-align: center;
         padding-top: 20px;
         input{
@@ -83,9 +191,49 @@
             height: 28px;
             border: 1px solid #c64669;
             background: #b61541;
+            color: #fff;
         }
         input:hover{
             cursor: pointer;
+        }
+    }
+    .cart-settlement{
+        padding-top: 12px;
+        display: none;
+        p{
+            text-align: right;
+            font-size: 12px;
+            color: #464646;
+            padding-right: 16px;
+            padding-bottom: 12px;
+            span{
+                margin: 0 3px;
+            }
+            i{
+                font-size: 18px;
+                color: #9d002b;
+                font-weight: bold;
+            }
+            em{
+                font-size: 18px;
+                color: #9d002b;
+                font-weight: bolder;
+            }
+        }
+        input{
+            width: 100px;
+            height: 31px;
+            float: right;
+        }
+        input:hover{
+            cursor: pointer;
+        }
+        .continue-buy{
+            background: url(../images/shopping_sub.jpg) no-repeat;
+        }
+        .to-settle{
+            background: url(../images/balance_sub.jpg) no-repeat;
+            margin-left: 11px;
         }
     }
 }

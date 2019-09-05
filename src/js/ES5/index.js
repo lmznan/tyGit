@@ -214,5 +214,22 @@ $(function () {
       $(this).css('border-color', '#eceaeb');
       $(this).find('i').css('display', 'none');
     });
+  }); //滚动事件 回到顶部出现
+
+  var $goTop = $('.go-top');
+  var $scroll = $('.go-top p');
+  $goTop.hide();
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 10) {
+      $goTop.show();
+    } else {
+      $goTop.hide();
+    }
+
+    $scroll.click(function () {
+      // $("html,body").animate({scrollTop : 0},500);
+      $('body').scrollTop(0);
+      $('html').scrollTop(0);
+    });
   });
 });
