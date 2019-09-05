@@ -206,7 +206,7 @@ $(function () {
               });
               return;
             } else {
-              //不存在，短信验证码已发送至您的手机，请输入验证码！$getmsg不能点击，120秒后可以点击
+              //不存在，短信验证码已发送至您的手机，请输入验证码！$getmsg不能点击，20秒后可以点击
               $('body').append('<div class="mask"><div class="mask-con clear_fix"><span></span><p>短信验证码已发送至您的手机，请输入验证码！</p><input type="button" name="" id="" value="确定"></div></div>');
               $('.mask-con span').click(function () {
                 $('.mask').remove();

@@ -156,12 +156,12 @@ $(function () {
       carts : {
           "BFF" : {
               "sp1" : {
-                  "$gdimg" : goodSrc,
-                  "$gdname" : goodName,
-                  "$gdsubname" : goodSubname,
-                  "$gdspec" : goodSpec,
-                  "$gdprice" : goodPrice
-                  "$gdnum" : goodNum
+                  "gdimg" : $gdimg,
+                  "gdname" : $gdname,
+                  "gdsubname" : $gdsubname,
+                  "gdspec" : $gdspec,
+                  "gdprice" : $gdprice
+                  "gdnum" : $gdnum
               },
               "sp2" : {
                   "gdimg" : $gdimg,
@@ -186,7 +186,7 @@ $(function () {
 
     var $gdname = $('.goods-introduction h2').html(); //获取商品别名
 
-    var $gdsubname = $('.good-introduction span').html(); //获取规格
+    var $gdsubname = $('.goods-introduction span').html(); //获取规格
 
     var $gdspec = $('.specification-select span').first().html(); //获取价格
 
@@ -196,7 +196,7 @@ $(function () {
 
     var storage = window.localStorage;
     var storageStr = storage['carts'] ? storage['carts'] : '';
-    var storageObj = convertStorageStrTOStorageObj(storageStr);
+    var storageObj = convertStorageStrTOStorageObj(storageStr); //判断商品是否已存在情况存入localStorage
 
     if ($gdname in storageObj) {
       var goodObj = JSON.parse(storageObj[$gdname]);

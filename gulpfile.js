@@ -15,7 +15,7 @@ gulp.task('test',()=>{
 
 gulp.task('sass',()=>{
     gulp.src('./src/sass/*.scss').pipe(sass())
-    //.pipe(cssnano())
+    .pipe(cssnano())
     .pipe(rename({suffix : '.min'})).pipe(gulp.dest('./dist/css'));
 })
 gulp.task('img', () => {

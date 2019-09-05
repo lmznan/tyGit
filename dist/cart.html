@@ -31,7 +31,7 @@
                     </ul>
                 </div>
                 <div class="cart-list" id="deliveryGoods">
-                    <table cellpadding="0" cellspacing="0">
+                    <table cellpadding="0" cellspacing="0" id="productTab">
                         <tbody>
                             <tr class="no-goods">
                                 <td colspan="6" class="ba-color">
@@ -54,20 +54,20 @@
                                 <th>小计</th>
                                 <th>操作</th>
                             </tr>
-                            <tr id="BFFsp1">
+                            <!-- <tr id="BFFsp1" class="goods-show">
                                 <td>
                                     <input type="checkbox">
                                 </td>
                                 <td>
                                     <dl>
                                         <dt>
-                                            <img src="" alt="">
+                                            <img src="images/CAKE095_800x800.jpg" alt="">
                                         </dt>
                                         <dd>
                                             <p>
                                                 <a href="#">柚一夏</a><br>
                                                 <span>Yo Yuzu</span><br>
-                                                <span>规格：600克</span>
+                                                <span class="sp1">规格：600克</span>
                                             </p>
                                         </dd>
                                     </dl>
@@ -79,10 +79,10 @@
                                     </b>
                                 </td>
                                 <td>
-                                    <div>
-                                        <input type="button" value="+">
-                                        <input type="text" value="1">
+                                    <div class="goods-num">
                                         <input type="button" value="-">
+                                        <input type="text" value="1">
+                                        <input type="button" value="+">
                                     </div>
                                 </td>
                                 <td>
@@ -92,14 +92,21 @@
                                     </b>
                                 </td>
                                 <td>
-                                    <a href="#">删除</a>
+                                    <a href="#"  class="goods-del">删除</a>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
                 <div class="go-back">
                     <input type="button" value="返回去购物">
+                </div>
+                <div class="cart-settlement">
+                    <p>
+                        共<span>2</span>件商品，总计<i>￥</i><em>566.00</em>
+                    </p>
+                    <input type="button" class="to-settle">
+                    <input type="button" class="continue-buy">
                 </div>
             </div>
         </div>
